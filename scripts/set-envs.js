@@ -10,6 +10,7 @@ const fileName = 'environment.ts'
 const envFileContent = `
     export const environment = {
         BASE_URL: "${process.env['BASE_URL']}",
+        PEXELS_KEY: "${process.env['PEXELS_KEY']}",
     };
 `;
 

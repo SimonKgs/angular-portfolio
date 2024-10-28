@@ -1,62 +1,16 @@
-<div class="max-w-7xl w-full mx-auto my-32 px-4 overflow-hidden">
+<div class="max-w-7xl w-full mx-auto lg:my-32 my-16 px-4 overflow-hidden">
     <div class="relative">
         <div class="absolute border-dotted border-2 inset-0 bg-gradient-to-r from-transparent via-black/50 to-transparent bg-[length:20px_2px] bg-no-repeat"></div>
-        <div class="relative bg-white p-12 border border-black">
-            <!-- Your content goes here -->
-            <p class="underline lg:text-3xl sm:text-xl ">Introducing myself</p>
-            <p class="lg:text-2xl sm:text-lg my-10">
-                I am a software developer with more than 3 years experience, counting experience as it is defined 
-                on dictionary: 
+        <div #showHistory class="relative cursor-pointer bg-white lg:p-12 p-4 border border-black">
 
-                @defer {
+             <div>
+                <p class="underline lg:text-3xl sm:text-xl lg:my-10 mb-6">Once upon a time</p>
+                <P class=" lg:text-lg text-sm">A long story about my journey awaits. Click here if you're interested! </P>
+             </div>
+            @defer ( on interaction(showHistory) ) {
+                <app-story />
+            }
 
-                    <app-definitions word="experience"/>
-
-                } @placeholder {
-                    <span>Searching definitions</span>
-                }
-            </p>
-            <p class="lg:text-2xl sm:text-lg my-10">
-                As I said I spent like 2 years looking for a job on the field, while I learn to programming whith different languages,
-                I normally use TypeScript, I start using Java, then JavaScript and NodeJS, then PHP on college, I aprove all signatures
-                except Java bacause I was working and don't prepare for it enough.
-            </p>
-            <p class="lg:text-2xl sm:text-lg my-10">
-                The time passed and I come back to make the Java exam this time fully prepared for it, I went to the 
-                final test, after learn by myself instead of the classess I get a 10 on the exam and I only have to do the final project
-            </p>
-            <p class="lg:text-2xl sm:text-lg my-10">
-                For this project I was very confident after get the title with no problem, so I decided to make the project with NextJS, 
-                at that moment I only heard about that but it was very interstant for me, server side rendering first time I heard, so I could make all in the front end
-                lets go.
-            </p>
-            <p class="lg:text-2xl sm:text-lg my-10">
-                I start the project without nothing of knowledge of the fucking framework so it was very challenging however day by day I was learning new things,
-                finally even if it was not the best designed project nor visually nor architecture, it was a project which works as was descripted on the presentation,
-                it consumed an Api from Deezer via Rapid API, and using my endpoints it let me create, and manage list, songs and users,
-                the users will only modifiable by itself and by the admins, the list and songs for its owner.
-            </p>
-            <p class="lg:text-2xl sm:text-lg my-10">
-                So I get the title, and start looking for a job, one year of desperation until I get an interview, I goes to the first one and because,
-                I normally have the autosave on my computer and I was very nervious I fail, but I have atleast a fucking interview after 2000 thousend, yes thousend.
-            </p>
-            <p class="lg:text-2xl sm:text-lg my-10">
-                After that there was other interview, I present for a JS work, the test was on PHP, language I dont like to work with particuraly, but I did it and to my surprise I get the work, 
-                sadly even if it was my first work and I worked with good people the job was not what I looking for, it was more PHP than other thing, that parts is ok but "WORDPRESS" shit I hate wordpress
-                I hate it a lot, I was a bad experience many years ago using that, I don't CMS, is the worst thing invented, yeah very usefull to make a page fast, and whatever the result be, but not for me 
-                I enjoy to be between lines of code, even if I prefer to be a programmer than a system administrator, I would like to be a systema adm using linux than a web developer using wordpress, 
-                I preffer to work in a kitchen instead of work with Wordpress 
-            </p>
-            <p class="lg:text-2xl sm:text-lg my-10">
-                So finally when it was the time to renew, I don't like the offer I have from the company I will be trapped by Wordpress forever, and also I don't like the direction of the company so we don't reach an accord, so finally after ayear start again to seek a job. 
-            </p>
-            <p class="lg:text-2xl sm:text-lg my-10">
-                I continues almost every day, searching for a job a sotware developer and learning new things the last one was Angular, and continue learning it, this page is for fun and for practice, also continue learning english by myself, that's becasue I write all this text in this language always to practice
-                and probably in some months I start working in a bar because the shit of market I don't have much expectations to get a job but I am trying.
-            </p>
-            <p class="lg:text-2xl sm:text-lg my-10">
-                So if you read all my story, thanks for read all and I hope you are looking for a developer, that even if not the best, one that tries and works constantly on it, have a nice day!n
-            </p>
         </div>
     </div>
 </div>

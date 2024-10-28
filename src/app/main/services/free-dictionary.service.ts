@@ -19,7 +19,6 @@ export class FreeDictionaryService {
   getDefinitionOf(word: string) {
     return this.#http.get<DefinitionResponse[]>(`${this.#baseDefinitionApiUrl}/${word}`)
         .pipe(
-            tap(resp => console.log('API Response:', resp)), 
             map(resp => {
               const meanings = resp[0]?.meanings; // could have more than one i want the first one
               // Extract definitions from meanings and return it
