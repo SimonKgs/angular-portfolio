@@ -1,0 +1,8 @@
+<div class="flex flex-col border-4 border-slate-500 bg-slate-200 py-5 px-10 my-10">
+    @for (definition of meanings(); track $index) {
+        <p class="my-8">{{ $index + 1 }}. {{ definition }}</p>
+    } @empty {
+        <span>definition not found</span>
+    }
+    <span class="text-xs w-full text-right">Definitions obtained from <a class="underline text-blue-400" href="https://dictionaryapi.dev/">free dictionary api</a></span>
+</div>

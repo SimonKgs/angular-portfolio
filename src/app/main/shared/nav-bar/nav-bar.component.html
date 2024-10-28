@@ -1,0 +1,45 @@
+<div class="w-screen h-20 flex items-center justify-around bg-slate-600 border-b-4 border-black p-4 fixed top-0 left-0 z-50">
+    <img src="/assets/logo.svg" alt="Logo" class="h-10 w-10 mx-2" />
+
+    <!-- Mobile menu button -->
+    <button #toggleButton class="md:hidden text-xl" (click)="collapseMenu()">
+        @if (isMenuOpen()) {
+            <img src="/assets/menu/menu.svg" alt="Logo" class="h-10 w-10" />
+        } @else {
+            <img src="/assets/menu/menuOpen.svg" alt="Logo" class="h-10 w-10" />
+        }
+        
+    </button>
+
+    <!-- Desktop menu -->
+    <div class="hidden md:flex w-full h-15 justify-around">
+        @for (item of menuItems; track $index) {
+            <ul>
+                <li class="">
+                    <a [routerLink]="item.path" routerLinkActive="underline text-gray-900" class="font-bold text-xl mx-5">{{ item.title }}</a>
+                </li>
+            </ul>
+        }
+    </div>
+
+    <!-- Mobile menu -->
+    @if (isMenuOpen()) {
+        @defer {
+            <div class="absolute z-50 border-b-4 border-black top-20 left-0 w-full bg-slate-600 flex flex-col items-center md:hidden">
+                @for (item of menuItems; track $index) {
+                    <ul class="w-full text-center">
+                        <li class="py-2 border-b-2 border-black" (click)="collapseMenu()">
+                            <a 
+                                [routerLink]="item.path"
+                                routerLinkActive="text-gray-900"
+                                class="font-bold text-lg"
+                            >
+                                {{ item.title }}
+                            </a>
+                        </li>
+                    </ul>
+                }
+            </div>
+        }
+    }
+</div>

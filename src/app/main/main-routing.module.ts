@@ -18,6 +18,11 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/achivements/achivements.component'),      
       },
       {
+        path: 'projects',
+        title: 'Projects',
+        loadComponent: () => import('./pages/projects/projects.component'),      
+      },
+      {
         path: '**',
         redirectTo: 'personal-info'     
       },
