@@ -1,6 +1,6 @@
 <div class="flex flex-col border-4 border-slate-500 bg-slate-200 py-5 lg:px-10 px-4 my-10">
     @for (definition of meanings(); track $index) {
-        <p class="lg:my-8 my-4">{{ $index + 1 }}. {{ definition }}</p>
+        <p class="lg:text-2xl sm:text-xl lg:my-8 my-4">{{ $index + 1 }}. {{ definition }}</p>
     } @empty {
         <span>definition not found</span>
     }

@@ -1,16 +1,13 @@
 <div class="max-w-7xl w-full mx-auto lg:my-32 my-16 px-4 overflow-hidden">
     <div class="relative">
-        <div class="absolute border-dotted border-2 inset-0 bg-gradient-to-r from-transparent via-black/50 to-transparent bg-[length:20px_2px] bg-no-repeat"></div>
-        <div #showHistory class="relative cursor-pointer bg-white lg:p-12 p-4 border border-black">
-
-             <div>
-                <p class="underline lg:text-3xl sm:text-xl lg:my-10 mb-6">Once upon a time</p>
-                <P class=" lg:text-lg text-sm">A long story about my journey awaits. Click here if you're interested! </P>
+        <div #showHistory class="relative bg-white lg:p-12 p-4 border border-black">
+             <div class="h-full w-full cursor-pointer hover:bg-slate-50">
+                <p class="underline lg:text-3xl sm:text-2xl mb-4 lg:mb-6">Once upon a time</p>
+                <P class="lg:text-2xl sm:text-xl ">A long story about my journey awaits — Click here if you're interested! </P>
              </div>
             @defer ( on interaction(showHistory) ) {
                 <app-story />
             }
-
         </div>
     </div>
 </div>

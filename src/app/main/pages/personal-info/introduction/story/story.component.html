@@ -1,65 +1,26 @@
 <div class="flex flex-col">
-    <p class="underline lg:text-3xl sm:text-xl lg:my-10 mt-10">Introducing myself</p>
+    <p class="underline lg:text-3xl sm:text-xl lg:my-8 mt-10">Introducing myself</p>
 
-    <p class="lg:text-2xl sm:text-lg my-10">
-        I'm a software developer with over three years of experience — defined here in the dictionary as:
-        @defer {
-            <app-definitions word="experience"/>
-        } @placeholder {
-            <span>Searching definitions</span>
+    @for (item of content(); track $index) {
+        <p class="lg:text-2xl sm:text-xl my-4 lg:my10">{{item.text}}</p>
+
+        @if ($index === 0) {
+            @defer {
+                <app-definitions word="experience"/>
+            } @placeholder {
+                <span>Searching definitions</span>
+            }
         }
         
-    </p>
-    <p class="lg:text-2xl sm:text-lg my-10">
-        For about two years, I searched for a job in the field while learning to program in different languages. 
-        I typically use TypeScript now, but I started with Java, then moved on to JavaScript and Node.js, 
-        and later PHP in college.
-    </p>
-    <p class="lg:text-2xl sm:text-lg my-10">
-        I passed all my classes except for Java, as I was working at the time and didn't prepare myself enough for it.
-    </p>
-
-    <app-image-component search="waiting"/>
-
-    <p class="lg:text-2xl sm:text-lg my-10">
-        Time passed, and I returned to retake the Java exam, this time fully prepared. I studied on my own instead of attending classes, and when I took the final test, I scored a 10. Now, all I had left was to complete the final project.
-    </p>
-    <app-image-component search="medal"/>
-
-    <p class="lg:text-2xl sm:text-lg my-10">
-        For this final project, I felt confident after earning my degree without much trouble. I decided to build it using Next.js. I’d only heard about it at the time, but the idea of server-side rendering was really interesting to me. This approach let me handle everything on the front end, so I dove right in.
-    </p>
-
-    <app-image-component search="Confusion" />
-
-    <p class="lg:text-2xl sm:text-lg my-10">
-        I started the project without any knowledge of the damn framework, so it was a real challenge. But day by day, I learned something new. In the end, even though it wasn’t the most beautifully designed project — visually or architecturally — it worked just as described in the presentation. It consumed an API from Deezer via RapidAPI, and with my own endpoints, I could create and manage lists, songs, and users. Only the users themselves or admins could modify their profiles, while lists and songs could be managed by their owners.
-    </p>
-    <p class="lg:text-2xl sm:text-lg my-10">
-        So, I got my degree and started looking for a job. It was a year of desperation until I finally landed an interview. I went to the first one, and because I usually have autosave enabled on my computer, I was so nervous that I messed up. But I finally got a fucking interview after sending out 2,000 applications. Yes, two thousand.
-    </p>
-
-    <app-image-component search="searching"/>
-
-    <p class="lg:text-2xl sm:text-lg my-10">
-        After that, I had another interview, this time for a JavaScript position. Surprisingly, the test was in PHP—a language I don’t particularly enjoy working with—but I did it, and to my surprise, I got the job. Unfortunately, even though it was my first position and I worked with some great people, the role was nothing like what I was looking for. It was mostly PHP, which I could handle, but…WordPress. I hate WordPress. I had a terrible experience with it years ago, and I think CMS systems are the worst invention. Sure, they make it easy to create a page quickly, but that’s just not for me. I want to work directly with code, between the lines. Honestly, I’d rather work as a Linux sysadmin—or even in a kitchen—than do WordPress development. 
-    </p>
-    <app-image-component search="php"/>
-
-    <p class="lg:text-2xl sm:text-lg my-10">
-        So finally, when it was time to renew my contract, I didn’t like the offer from the company. I felt like I would be trapped in WordPress forever, and I also disagreed with the company’s direction. We couldn’t reach an agreement, so after a year, I started the job search all over again.                
-    </p>
-    <app-image-component  search="break"/>
-
-    <p class="lg:text-2xl sm:text-lg my-10">
-        Nowadays, I continue searching almost every day for a job as a software developer while learning new things. The latest technology I've been diving into is Angular, and I’m still working on mastering it. This page is just for fun and practice. I’m also teaching myself English, which is why I write all this text in English—to practice. Unfortunately, given the state of the job market, I might have to start working in a bar soon. I don’t have high expectations of landing a job right now, but I’m still trying.
-    </p>
-    <app-image-component  search="hard work"/>
+        @if ( item.imageToSearch) {
+            @defer ( on viewport ) {
+                <app-image-component  [search]="item.imageToSearch"/>
+            } @placeholder {
+                <p class="text-center">Loading...</p>
+            }
+        }
+    }
     
-    <p class="lg:text-2xl sm:text-lg my-10">
-        So, if you’ve read through my entire story, thank you! I hope you’re looking for a developer—one who, even if not the best, is dedicated and constantly working to improve. Have a nice day!
-    </p>
-    <app-image-component  search="thanks" />
     <span class="text-xs w-full text-right">All images comes from <a class="underline text-blue-400" target="_blank" href="https://www.pexels.com/">Pexels API</a></span>
 
 </div>
