@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, effect, signal } from '@angular/core';
 import { StoryComponent } from "./story/story.component";
 
 @Component({
@@ -9,6 +9,9 @@ import { StoryComponent } from "./story/story.component";
   styleUrl: './introduction.component.css'
 })
 export class IntroductionComponent  {
+  showStory = signal(false);
 
-
+  openStory(){
+    this.showStory.set(true)
+  }
 }
