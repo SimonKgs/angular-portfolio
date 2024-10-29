@@ -6,10 +6,10 @@
                 
                 @defer(on timer(2000)) {
                     <h1 class="lg:text-6xl sm:text-4xl animate-pulse font-bold text-center bg-gradient-to-br from-green-300 to-green-700 bg-clip-text text-transparent transition-all duration-500 ease-in-out">
-                        {{ name() | uppercase }}
+                        {{ pageTitle() | uppercase }}
                     </h1>
                     <p class="lg:text-4xl animate-pulse sm:text-2xl font-bold text-center bg-gradient-to-r from-green-300 to-green-700 bg-clip-text text-transparent transition-all duration-500 ease-in-out">
-                        {{ position() }}
+                        {{ subtitle() }}
                     </p>
                 } @placeholder {
                     @defer( on immediate) {

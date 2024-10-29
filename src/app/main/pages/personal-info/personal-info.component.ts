@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HeroComponent } from "./hero/hero.component";
+import { HeroComponent } from "../../shared/hero/hero.component";
 import { IntroductionComponent } from "./introduction/introduction.component";
 
 @Component({

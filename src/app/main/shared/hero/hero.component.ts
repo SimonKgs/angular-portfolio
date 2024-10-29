@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, input, OnInit, signal } from '@angular/core';
 import { timer } from 'rxjs';
 
 @Component({
@@ -11,8 +11,11 @@ import { timer } from 'rxjs';
 })
 export class HeroComponent implements OnInit {
   
-  public name = signal('Simón González Quirós')
-  public position = signal('Software Developer')
+
+  public pageTitle = input.required<string>()
+  public subtitle = input.required<string>()
+
+  
   public isLoading = signal('Loading')
 
   ngOnInit(): void {

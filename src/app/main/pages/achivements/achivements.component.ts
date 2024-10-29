@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { HeroComponent } from "../../shared/hero/hero.component";
 
 @Component({
   selector: 'app-achivements',
   standalone: true,
-  imports: [],
+  imports: [HeroComponent],
   templateUrl: './achivements.component.html',
   styleUrl: './achivements.component.css'
 })
