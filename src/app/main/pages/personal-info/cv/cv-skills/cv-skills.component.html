@@ -1,0 +1,8 @@
+<div class="w-full my-8 lg:p-8 p-4 bg-white rounded-lg shadow-2xl">
+    <h2 class="lg:text-2xl text-lg mb-4 text-start underline">My Skills</h2>
+    
+    @for (skill of skills(); track $index) {
+        <cv-skill [skill]="skill" />
+    }
+
+</div>

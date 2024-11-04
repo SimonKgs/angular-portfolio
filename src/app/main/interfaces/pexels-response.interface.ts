@@ -1,32 +1,32 @@
 export interface PexelsResp {
+    next_page:     string;
     page:          number;
     per_page:      number;
     photos:        Photo[];
     total_results: number;
-    next_page:     string;
 }
 
 export interface Photo {
-    id:               number;
-    width:            number;
-    height:           number;
-    url:              string;
-    photographer:     string;
-    photographer_url: string;
-    photographer_id:  number;
-    avg_color:        string;
-    src:              Src;
-    liked:            boolean;
     alt:              string;
+    avg_color:        string;
+    height:           number;
+    id:               number;
+    liked:            boolean;
+    photographer_id:  number;
+    photographer_url: string;
+    photographer:     string;
+    src:              Src;
+    url:              string;
+    width:            number;
 }
 
 export interface Src {
-    original:  string;
-    large2x:   string;
-    large:     string;
-    medium:    string;
-    small:     string;
-    portrait:  string;
     landscape: string;
+    large:     string;
+    large2x:   string;
+    medium:    string;
+    original:  string;
+    portrait:  string;
+    small:     string;
     tiny:      string;
 }

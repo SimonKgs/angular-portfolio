@@ -1,0 +1,8 @@
+<div class="mb-6">
+    <p class="mb-2 lg:text-lg">{{ skill().name }}</p>
+    <div class="bg-gray-200 rounded-full h-6">
+    <div [class]="skill().color" class="flex items-center h-6 p-2 rounded-full" [style.width]="skill().experience + '%'">
+            <p class="lg:text-xl sm:text-lg p-2">{{ skill().experience }} %</p>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="w-full my-8 rounded-lg bg-slate-200 p-8 shadow-lg">
+    <h2 class="lg:text-2xl text-xl mb-6 text-start underline">Work Experience</h2>
+    <ul class="list-disc">
+        @for (job of jobs(); track $index) {
+            <li class="list-item my-5">
+                <p class="lg:text-xl font-semibold text-lg underline my-3">{{ job.title }}</p>
+                <p class="text-lg lg:font-semibold mb-2">{{ job.company }} - <span class="text-slate-700">{{ job.duration }}.</span></p>
+                <p class="text-lg hidden md:block">
+                    {{ job.description }} 
+                </p>
+                @if (job.responsibilities !== "") {
+                    <p class="text-lg hidden md:block">
+                        {{ job.responsibilities }}
+                    </p>
+                }
+            </li>
+        } 
+    </ul>
+
+</div>

@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Full Stack Developer",
+        "company": "Semilla Proyectos Internet (IA Gestión)",
+        "duration": "1 year",
+        "description": "In my last job as a software developer, I focused primarily on frontend development while also handling backend tasks. I used JavaScript (Vanilla), PHP, MySQL, CSS, and HTML.",
+        "responsibilities": "My responsibilities included creating websites from scratch based on client specifications, improving the company’s CRM, and making minor updates to existing pages."
+    },
+    {
+        "title": "Frontend Developer",
+        "company": "I-Logica",
+        "duration": "6 months",
+        "description": "After get my title I spent some months here, learning new things as frontend developer",
+        "responsibilities": "I assist on the creation of a landing page for a burguer, and manage data"
+    },
+    {
+        "title": "Frontend Developer (Internship)",
+        "company": "I-Logica",
+        "duration": "2 months",
+        "description": "As an internship I was learning on this manage of databases and frontend development using TypeScript",
+        "responsibilities": ""
+    }
+]

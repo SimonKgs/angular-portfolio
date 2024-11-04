@@ -1,10 +1,10 @@
 export interface DefinitionResponse {
-    word:       string;
+    license:    License;
+    meanings:   Meaning[];
     phonetic:   string;
     phonetics:  Phonetic[];
-    meanings:   Meaning[];
-    license:    License;
     sourceUrls: string[];
+    word:       string;
 }
 
 export interface License {
@@ -13,22 +13,22 @@ export interface License {
 }
 
 export interface Meaning {
-    partOfSpeech: string;
-    definitions:  DefinitionElement[];
-    synonyms:     string[];
     antonyms:     string[];
+    definitions:  DefinitionElement[];
+    partOfSpeech: string;
+    synonyms:     string[];
 }
 
 export interface DefinitionElement {
-    definition: string;
-    synonyms:   any[];
     antonyms:   any[];
+    definition: string;
     example?:   string;
+    synonyms:   any[];
 }
 
 export interface Phonetic {
-    text:      string;
     audio:     string;
-    sourceUrl: string;
     license:   License;
+    sourceUrl: string;
+    text:      string;
 }
