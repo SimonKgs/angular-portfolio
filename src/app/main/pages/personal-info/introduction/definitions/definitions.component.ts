@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject, input, signal, OnInit } from '@angular/core';
-import { DefinitionResponse } from '../../../interfaces/definition-response.interface';
-import { FreeDictionaryService } from '../../../services/free-dictionary.service';
+import { DefinitionResponse } from '../../../../interfaces/definition-response.interface';
+import { FreeDictionaryService } from '../../../../services/free-dictionary.service';
 
 @Component({
   selector: 'app-definitions',

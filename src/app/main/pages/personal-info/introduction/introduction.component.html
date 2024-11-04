@@ -1,15 +1,12 @@
-<div class="max-w-7xl w-full mx-auto lg:my-32 my-16 px-4 overflow-hidden">
-    <div class="relative">
-        <div class="relative bg-white lg:p-12 p-4 border border-black">
-             <div (click)="openStory()" #showHistory class="h-full w-full cursor-pointer text-center hover:bg-slate-100">
-                <p class="underline lg:text-3xl sm:text-2xl mb-4 lg:mb-6">Once upon a time</p>
-                <P class="lg:text-2xl sm:text-xl ">A long story about my journey awaits — Click here if you're interested! </P>
-             </div>
-            @defer ( on interaction(showHistory) ) {
-                @if (showStory()) {
-                    <app-story [showStory]="showStory" />
-                }
-            }
+
+<div class="relative bg-white lg:p-12 p-4 border border-black">
+        <div (click)="openStory()" #showHistory class="h-full w-full cursor-pointer text-center hover:bg-slate-100">
+        <p class="underline lg:text-3xl sm:text-2xl mb-4 lg:mb-6">Once upon a time</p>
+        <P class="lg:text-2xl sm:text-xl ">A long story about my journey awaits — Click here if you're interested! </P>
         </div>
-    </div>
+    @defer ( on interaction(showHistory) ) {
+        @if (showStory()) {
+            <app-story [showStory]="showStory" />
+        }
+    }
 </div>

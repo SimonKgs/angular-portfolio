@@ -9,7 +9,5 @@ import { NavBarComponent } from "./shared/nav-bar/nav-bar.component";
   templateUrl: './main-layout.component.html',
 })
 export class MainLayoutComponent {
-  constructor(){
-    console.log('MAIN');
-  }
+
 }
