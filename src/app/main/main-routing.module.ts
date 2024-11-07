@@ -23,6 +23,11 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/projects/projects.component'),      
       },
       {
+        path: 'mtg',
+        title: 'MTG',
+        loadComponent: () => import('./pages/mtg/mtg.component'),      
+      },
+      {
         path: '**',
         redirectTo: 'personal-info'     
       },

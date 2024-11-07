@@ -1,0 +1,15 @@
+<div class="mx-auto w-full">
+    <app-hero pageTitle="MTG" subtitle="Organize your Decks" />
+    <div class="max-w-7xl w-full mx-auto lg:my-32 my-16 px-4 overflow-hidden">
+        <div class="relative">
+            <app-search [search]="search()" (onSearch)="updateSearchTerm($event)"></app-search>
+            <hr />
+            @if (search()) {
+                @defer () {
+                    <p class="text-3xl font-semibold underline mt-5">CARDS</p>
+                    <card-list [search]="search()" />
+                } 
+            } 
+        </div>
+    </div>
+</div>

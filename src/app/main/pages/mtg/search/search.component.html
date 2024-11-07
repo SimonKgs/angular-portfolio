@@ -1,0 +1,11 @@
+<div class="flex flex-col">
+
+    <div class="flex w-full">
+        <input class="w-full py-3 px-5 text-xl" #searchName type="text" (keyup.enter)="onSearchCard(searchName.value)" />
+        <button class="border w-40 border-green-800 bg-green-800 text-white px-4 py-2" (click)="onSearchCard(searchName.value)">Search</button>
+    </div>
+    @if ( search() !== '') {
+    <p class="py-5 px-5 text-xl">Current Search: {{ search() }}</p>
+    <hr>
+    }
+</div>

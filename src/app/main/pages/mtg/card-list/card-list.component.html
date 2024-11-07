@@ -1,0 +1,7 @@
+<div class="grid gap-6 lg:grid-cols-3 p-4">
+@for (card of cards(); track $index) {
+    <card [card]="card"/>
+} @empty {
+    <p class="text-xl">There is no results</p>
+}
+</div>

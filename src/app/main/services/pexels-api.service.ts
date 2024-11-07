@@ -10,7 +10,7 @@ import { PexelsResp } from '../interfaces/pexels-response.interface';
 export class PexelsAPIService {
 
   #http = inject(HttpClient)
-  #imageURL = 'https://api.pexels.com/v1'
+  #imageURL = 'https://api.pexels.com'
 
   searchGif(query: string): Observable<any> {
     const headers = new HttpHeaders({
@@ -25,7 +25,8 @@ export class PexelsAPIService {
       }
     });
         
-    return this.#http.get<PexelsResp>(`${this.#imageURL}/search`, { params, headers });
+    return this.#http.get<PexelsResp>(`${this.#imageURL}/v1/search`, { params, headers });
 
   }
+
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { HeroComponent } from "../../shared/hero/hero.component";
 
 @Component({
@@ -9,5 +9,6 @@ import { HeroComponent } from "../../shared/hero/hero.component";
   styleUrl: './projects.component.css'
 })
 export default class ProjectsComponent {
+
 
 }

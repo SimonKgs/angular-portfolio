@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
 import { CvSkillComponent } from "./cv-skill/cv-skill.component";
-import { Skill, } from '../../../../interfaces/skill.interface';
-import skills from './data/skills.json'
+import { Skill } from '../../../../interfaces/skill.interface';
+import skillsJson from './data/skills.json'
 
+const skillsSorted = [...skillsJson].sort((a, b) => b.experience - a.experience)
 
 
 @Component({
@@ -13,6 +14,7 @@ import skills from './data/skills.json'
   styleUrl: './cv-skills.component.css'
 })
 export class CvSkillsComponent {
+  
+  public skills = signal<Skill[]>(skillsSorted)
 
-  public skills = signal<Skill[]>(skills)
 }

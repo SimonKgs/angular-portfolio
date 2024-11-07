@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, input, OnInit, signal } from '@angular/core';
-import { timer } from 'rxjs';
+import { ImageComponentComponent } from "../image-component/image-component.component";
+
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ImageComponentComponent],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css'
 })
@@ -13,7 +14,7 @@ export class HeroComponent implements OnInit {
   
 
   public pageTitle = input.required<string>()
-  public subtitle = input.required<string>()
+  public subtitle = input<string>()
 
   
   public isLoading = signal('Loading')
