@@ -1,12 +1,11 @@
-<div class="w-screen h-20 flex items-center justify-around bg-slate-600 border-b-4 border-black p-4 fixed top-0 left-0 z-50">
-    <img src="/assets/logo.svg" alt="Logo" class="h-10 w-10 mx-2" />
+<div class="w-screen h-12 lg:h-16 flex items-center justify-around bg-slate-600 border-b-4 border-black p-4 fixed top-20 left-0 z-40">
 
     <!-- Mobile menu button -->
     <button #toggleButton class="md:hidden text-xl" (click)="collapseMenu()">
         @if (isMenuOpen()) {
-            <img src="/assets/menu/menu.svg" alt="Logo" class="h-10 w-10" />
+            <img src="/assets/magic-logo.svg" alt="Logo" class="h-10 w-10" />
         } @else {
-            <img src="/assets/menu/menuOpen.svg" alt="Logo" class="h-10 w-10" />
+            <img src="/assets/magic-logo-filled.svg" alt="Logo" class="h-10 w-10" />
         }
         
     </button>
@@ -26,7 +25,7 @@
     <!-- Mobile menu -->
     @if (isMenuOpen()) {
         @defer {
-            <div class="absolute z-50 border-b-4 border-black top-20 left-0 w-full bg-slate-600 flex flex-col items-center md:hidden">
+            <div class="absolute z-40 border-b-4 border-black top-12 left-0 w-full bg-slate-600 flex flex-col items-center md:hidden">
                 @for (item of menuItems; track $index) {
                     <ul class="w-full text-center">
                         <li class="py-2 border-b-2 border-black" (click)="collapseMenu()">

@@ -25,7 +25,7 @@ export const routes: Routes = [
       {
         path: 'mtg',
         title: 'MTG',
-        loadComponent: () => import('./pages/mtg/mtg.component'),      
+        loadChildren: () => import('./pages/mtg/mtg-routing.module')
       },
       {
         path: '**',

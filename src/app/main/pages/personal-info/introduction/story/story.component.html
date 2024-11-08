@@ -13,7 +13,7 @@
         }
         
         @if ( item.imageToSearch) {
-            @defer ( on viewport ) {
+            @defer {
                 <app-image-component  [search]="item.imageToSearch"/>
             } @placeholder {
                 <p class="text-center">Loading...</p>
