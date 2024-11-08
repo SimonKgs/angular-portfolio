@@ -1,0 +1,10 @@
+<div>
+    <app-search [search]="search()" (onSearch)="updateSearchTerm($event)"></app-search>
+    <hr />
+    @if (search()) {
+        @defer () {
+            <p class="text-3xl font-semibold underline mt-5">CARDS</p>
+            <card-list [search]="search()" />
+        } 
+    } 
+</div>

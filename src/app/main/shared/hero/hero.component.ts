@@ -6,7 +6,7 @@ import { ImageComponentComponent } from "../image-component/image-component.comp
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule, ImageComponentComponent],
+  imports: [ CommonModule ],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.css'
 })

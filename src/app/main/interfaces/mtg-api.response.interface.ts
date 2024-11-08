@@ -6,7 +6,8 @@ export interface CardInterface {
     colorIdentity: ColorCard[],
     rarity: RarityCard,
     text: string,
-    imageUrl: string
+    imageUrl: string,
+    id: string
 }
 
 export interface MtgResponse {

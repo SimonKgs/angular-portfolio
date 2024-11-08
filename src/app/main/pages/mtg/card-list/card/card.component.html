@@ -1,6 +1,4 @@
-@if (card.imageUrl) {
-    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-        <!-- Responsive image height: shorter on smaller screens, taller on larger screens -->
-        <img class="w-full h-full object-cover" [src]="card.imageUrl" [alt]="card.name">
-    </div>
-}
+<div class="overflow-hidden">
+    <!-- Responsive image height: shorter on smaller screens, taller on larger screens -->
+    <img class="w-full h-full object-cover" [src]="card.imageUrl" [alt]="card.name">
+</div>
