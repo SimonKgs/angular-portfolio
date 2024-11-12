@@ -1,7 +1,8 @@
 import { Component, signal } from '@angular/core';
-import { routes } from '../mtg-routing.module';
+import { routes } from '../../mtg-routing.module';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { getMenuItems } from '../../../../../utils/getRoutes';
 
 @Component({
   selector: 'mtg-nav-bar',
@@ -13,11 +14,11 @@ import { RouterModule } from '@angular/router';
 export class MtgNavBarComponent {
   public isMenuOpen = signal<boolean>(false)
 
-  public menuItems = routes
-    .map( route => route.children ?? [])
-    .flat()
-    .filter( route => route && route.path && route.title);
-
+  public menuItems = getMenuItems(routes);
+  
+  constructor(){
+    console.log(this.menuItems);
+  }  
 
   collapseMenu() {
     this.isMenuOpen.set(!this.isMenuOpen())

@@ -16,7 +16,7 @@
         @for (item of menuItems; track $index) {
             <ul>
                 <li class="">
-                    <a [routerLink]="item.path" routerLinkActive="underline text-gray-900" class="font-bold text-xl mx-5">{{ item.title }}</a>
+                    <a [routerLink]="'/mtg/' + item.path" routerLinkActive="underline text-gray-900" class="font-bold text-xl mx-5">{{ item.title }}</a>
                 </li>
             </ul>
         }
@@ -30,7 +30,7 @@
                     <ul class="w-full text-center">
                         <li class="py-2 border-b-2 border-black" (click)="collapseMenu()">
                             <a 
-                                [routerLink]="item.path"
+                                [routerLink]="'/mtg/' + item.path"
                                 routerLinkActive="text-gray-900"
                                 class="font-bold text-lg"
                             >

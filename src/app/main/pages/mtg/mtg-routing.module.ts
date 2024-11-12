@@ -1,26 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MtgLayoutComponent } from './mtg-layout.component';
 
 export const routes: Routes = [
+  {
+    path: '',
+    component: MtgLayoutComponent,
+    children: [
     {
-      path: '',
-      children: [
-        {
-          path: 'card-list',
-          title: 'Cards',
-          loadComponent: () => import('./mtg.component'),
-        },
-        {
-          path: 'decks',
-          title: 'Decks',
-          loadComponent: () => import('./mtg.component'),
-        },
-        {
-          path: '**',
-          redirectTo: 'card-list'     
-        },
-      ]
-  }
+        path: 'card-list',
+        title: 'Cards',
+        loadComponent: () => import('./pages/card-list/mtg.component'),
+      },
+      {
+        path: 'decks',
+        title: 'Decks',
+        loadComponent: () => import('./pages/decks/decks.component'),
+      },
+      {
+        path: '**',
+        redirectTo: 'card-list'     
+      },
+    ]
+  } 
 ];
 
 @NgModule({
