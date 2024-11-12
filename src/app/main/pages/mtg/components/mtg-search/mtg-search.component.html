@@ -1,5 +1,5 @@
 <div>
-    <app-search [search]="search()" (onSearch)="updateSearchTerm($event)"></app-search>
+    <mtg-search-controls [search]="search()" (onSearch)="updateSearchTerm($event)" />
     <hr />
     @if (search()) {
         @defer () {

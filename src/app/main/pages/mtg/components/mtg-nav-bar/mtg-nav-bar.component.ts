@@ -16,10 +16,6 @@ export class MtgNavBarComponent {
 
   public menuItems = getMenuItems(routes);
   
-  constructor(){
-    console.log(this.menuItems);
-  }  
-
   collapseMenu() {
     this.isMenuOpen.set(!this.isMenuOpen())
   }

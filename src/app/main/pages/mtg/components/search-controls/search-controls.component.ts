@@ -1,11 +1,11 @@
-import { Component, input, signal, OnInit, output, WritableSignal } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
-  selector: 'app-search',
+  selector: 'mtg-search-controls',
   standalone: true,
   imports: [],
-  templateUrl: './search.component.html',
-  styleUrl: './search.component.css'
+  templateUrl: './search-controls.component.html',
+  styleUrl: './search-controls.component.css'
 })
 export class SearchComponent  {
   
