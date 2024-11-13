@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { CardInterface } from '../../../../interfaces/mtg-api.response.interface';
+import { CardInterface } from '../../interfaces/mtg-interface'; 
 
 @Component({
   selector: 'card',

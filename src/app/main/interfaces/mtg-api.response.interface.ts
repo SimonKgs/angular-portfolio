@@ -1,15 +1,3 @@
-export interface CardInterface {
-    name: string,
-    manaCost: "{2}{U}{U}",
-    cmc: number,
-    colors: ColorCard[],
-    colorIdentity: ColorCard[],
-    rarity: RarityCard,
-    text: string,
-    imageUrl: string,
-    id: string
-}
-
 export interface MtgResponse {
     cards: Card[];
 }

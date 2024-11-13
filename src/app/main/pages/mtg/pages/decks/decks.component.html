@@ -20,40 +20,12 @@
         >
             +
         </button>
-        <div class="relative h-52 flex justify-center items-center rounded-xl bg-cover bg-center bg-[url('/assets/azorius.jpg')]">
-            <div class="absolute inset-0 bg-black bg-opacity-50 rounded-xl"></div>
-            <span class="relative text-white text-2xl font-bold">HELLO</span>
-        </div>
-        <div class="relative h-52 flex justify-center items-center rounded-xl bg-cover bg-center bg-[url('/assets/boros.jpg')]">
-            <div class="absolute inset-0 bg-black bg-opacity-50 rounded-xl"></div>
-            <span class="relative text-white text-2xl font-bold">HELLO</span>
-        </div>
-        <div class="relative h-52 flex justify-center items-center rounded-xl bg-cover bg-center bg-[url('/assets/dimir.jpg')]">
-            <div class="absolute inset-0 bg-black bg-opacity-50 rounded-xl"></div>
-            <span class="relative text-white text-2xl font-bold">HELLO</span>
-        </div>
-        <div class="relative h-52 flex justify-center items-center rounded-xl bg-cover bg-center bg-[url('/assets/golgari.jpg')]">
-            <div class="absolute inset-0 bg-black bg-opacity-50 rounded-xl"></div>
-            <span class="relative text-white text-2xl font-bold">HELLO</span>
-        </div>
-        <div class="relative h-52 flex justify-center items-center rounded-xl bg-cover bg-center bg-[url('/assets/gruul.jpg')]">
-            <div class="absolute inset-0 bg-black bg-opacity-50 rounded-xl"></div>
-            <span class="relative text-white text-2xl font-bold">HELLO</span>
-        </div>
-        <div class="relative h-52 flex justify-center items-center rounded-xl bg-cover bg-center bg-[url('/assets/izzet.jpg')]">
-            <div class="absolute inset-0 bg-black bg-opacity-50 rounded-xl"></div>
-            <span class="relative text-white text-2xl font-bold">HELLO</span>
-        </div>
-        <div class="relative h-52 flex justify-center items-center rounded-xl bg-cover bg-center bg-[url('/assets/orzhov.jpg')]">
-            <div class="absolute inset-0 bg-black bg-opacity-50 rounded-xl"></div>
-            <span class="relative text-white text-2xl font-bold">HELLO</span>
-        </div>
-        <div class="relative h-52 flex justify-center items-center rounded-xl bg-cover bg-center bg-[url('/assets/rakdos.jpg')]">
-            <div class="absolute inset-0 bg-black bg-opacity-50 rounded-xl"></div>
-            <span class="relative text-white text-2xl font-bold">HELLO</span>
-        </div>
-        
-        
+        @for (deck of decks(); track $index) {
+            <div class="relative h-52 flex justify-center items-center rounded-xl bg-cover bg-center bg-[url('/assets/azorius.jpg')]">
+                <div class="absolute inset-0 bg-black bg-opacity-50 rounded-xl"></div>
+                <span class="relative text-white text-2xl font-bold">{{ deck.name }}</span>
+            </div>
+        }
         
     </div>
 </div>

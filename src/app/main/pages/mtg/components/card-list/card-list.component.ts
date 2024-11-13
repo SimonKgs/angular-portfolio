@@ -1,6 +1,6 @@
 import { Component, inject, signal, input, effect } from '@angular/core';
 import { MtgApiService } from '../../../../services/mtg-api.service';
-import { CardInterface } from '../../../../interfaces/mtg-api.response.interface';
+import { CardInterface } from '../../interfaces/mtg-interface'; 
 import { CardComponent } from "../card/card.component";
 import { tap } from 'rxjs';
 
@@ -48,7 +48,11 @@ export class CardListComponent {
         rarity: card.rarity,
         text: card.text,
         imageUrl: card.imageUrl,
-        id: card.id
+        id: card.id,
+        types: card.types,
+        type: card.type,
+        supertypes: card.supertypes
+
       }));
 
       const uniqueCards = transformedResponse.filter(
