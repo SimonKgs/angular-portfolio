@@ -18,6 +18,10 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/decks/decks.component'),
       },
       {
+        path: 'decks/:id',
+        loadComponent: () => import('./pages/deck-builder/deck-builder.component')
+      },
+      {
         path: '**',
         redirectTo: 'card-list'     
       },

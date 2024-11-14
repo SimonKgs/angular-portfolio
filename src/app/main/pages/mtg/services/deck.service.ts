@@ -26,6 +26,10 @@ export class DeckService {
     ).subscribe();
   }
 
+  getDecks(): Observable<DeckInterface[]> {
+    return this.#http.get<DeckInterface[]>(`${this.#url}`);
+  }
+
   // Get a single deck by its ID
   getDeckById(id: string): Observable<DeckInterface> {
     return this.#http.get<DeckInterface>(`${this.#url}/${id}`);

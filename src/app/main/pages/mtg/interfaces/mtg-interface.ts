@@ -16,9 +16,10 @@ export interface CardInterface {
 }
 
 export interface DeckInterface {
-    id: string;
+    id?: string;
     name: string;
-    cards: CardInterface[];
-    identity: ColorCard[]
-    commander: CardInterface;
+    cards?: CardInterface[];
+    identity?: ColorCard[];
+    commander?: CardInterface;
+    deckImage?: string;
 }
