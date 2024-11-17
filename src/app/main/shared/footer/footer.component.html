@@ -1,23 +1,29 @@
 <div class="w-full flex flex-col bg-slate-600 border-t-4 border-black bottom-0 left-0 z-50">
     <div class="my-5 flex flex-col lg:flex-row lg:text-start text-center w-full justify-around">
         <div class="flex flex-col">
-            <p>Pages</p>
+            <p class="font-bold lg:text-2xl text-xl underline my-2">Pages</p>
             @for (page of pages; track $index) {
                 <a 
                     [routerLink]="page.path"
                     routerLinkActive="text-gray-900"
-                    class="font-bold text-lg"
+                    class="font-bold lg:text-xl text-lg my-1"
                 >
                     {{ page.title }}
                 </a>
             }
         </div>
-        <div class="flex flex-col">
-            Other column
+        <div class="flex flex-col lg:my-0 my-3">
+            <p class="font-bold lg:text-2xl text-xl underline my-2">Contact me</p>
+            <ul class="list-none">
+                <a href="https://www.linkedin.com/in/simongq" target="_blank">
+                    <li class="lg:text-black text-slate-900 hover:text-blue-500 font-semibold hover:font-bold lg:text-xl text-lg my-1">LinkedIn: simongq</li>
+                </a>
+                <li class="text-black font-bold lg:text-xl text-lg my-1">Email: simongonzalezquir&#64;gmail.com</li>
+            </ul>
         </div>
     </div>
-    <div class="flex flex-col gap-2 lg:flex-row justify-center items-center w-full border-t-2 border-black">
-        <p class="text-sm">Designed and created by:</p>
-        <p class="text-sm">© Simón G. Quirós - {{ actualDate() }} ♡</p>
+    <div class="flex flex-col gap-2 py-2 lg:flex-row justify-center items-center w-full border-t-2 border-black">
+        <p class="text-sm font-semibold">Designed and created by</p>
+        <p class="text-sm font-semibold">© Simón G. Quirós - {{ actualDate() }} ♡</p>
     </div>
 </div>

@@ -1,4 +1,20 @@
 <div class="mx-auto w-full">
     <app-hero pageTitle="Achivements" subtitle="My Path to Success" />
-    <p>Achivements Works!</p>
+    <div class="max-w-7xl w-full mx-auto lg:my-32 my-16 px-4 overflow-hidden">
+
+        <p class="lg:text-4xl text-2xl mb-10 underline font-bold">Certifications</p>
+        <div class="grid lg:grid-cols-3 gap-10">
+            @for (cert of certs(); track $index) {
+                <a [href]="cert.certUrl" target="_blank" class="group">
+                    <div class="rounded bg-slate-200 overflow-hidden">
+                        <p class="px-6 py-2 font-semibold lg:text-2xl text-xl">{{ cert.titleName}}</p>
+                        <img [src]="cert.certUrl" alt="certification of {{ cert.titleName }}"
+                        class="transition-transform duration-200 ease-in-out transform group-hover:scale-105"
+                        >
+                        <p class="px-4 py-2 lg:text-xl text-lg">Obtained on: {{cert.obtainedOn.getMonth()}}/{{ cert.obtainedOn.getFullYear() }}</p>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
 </div>
