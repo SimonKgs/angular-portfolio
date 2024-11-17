@@ -1,0 +1,10 @@
+<div class="w-full my-8 p-8 bg-white rounded-lg shadow-2xl">
+    <h2 class="lg:text-2xl text-lg mb-4 text-start underline">Other Skills</h2>
+    <ul class="list-disc">
+        @for (softSkill of softSkills(); track $index) {
+            <li class="list-item my-5">
+                <p class="lg:text-xl text-lg my-3">{{ softSkill }}</p>
+            </li>
+        }
+    </ul>
+</div>

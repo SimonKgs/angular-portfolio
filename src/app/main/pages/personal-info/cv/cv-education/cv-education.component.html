@@ -1,0 +1,21 @@
+<div class="w-full my-8 rounded-lg bg-slate-200 p-8 shadow-lg">
+    <h2 class="lg:text-2xl text-xl mb-6 text-start underline">Education</h2>
+    <ul class="list-disc">
+
+    @for (degree of education(); track $index) {
+        <li class="list-item my-5">
+            <p class="lg:text-xl font-semibold text-lg underline my-3">{{ degree.title }}</p>
+            <p class="text-lg lg:font-semibold mb-2">{{ degree.college }} - <span class="text-slate-700">{{ degree.level }}.</span></p>
+            <p class="text-lg hidden md:block">
+                {{ degree.description }} 
+            </p>  
+        </li> 
+    }
+    </ul>
+    <a 
+        routerLink="/achivements"
+        class="underline text-blue-400"
+    >
+        Check out my certifications here
+    </a>
+</div>
