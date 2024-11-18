@@ -11,4 +11,6 @@ import { RouterModule } from '@angular/router';
   styleUrl: './mtg-layout.component.css'
 })
 
-export class MtgLayoutComponent {}
+export class MtgLayoutComponent {
+  
+}
