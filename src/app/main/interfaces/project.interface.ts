@@ -1,20 +1,21 @@
-export type Technology = 
-'Java' 
-| 'TypeScript' 
-| 'JavaScript' 
-| 'NodeJS' 
-| 'React' 
-| 'Angular' 
-| 'Express'
-| 'HTML'
-| 'CSS'
-| 'MySQL'
-| 'MongoDB'
-| 'Python'
-| 'Flask'
-| 'Django'
-| 'NextJS'
-;
+export enum Technology {
+    Java = 'Java',
+    TypeScript = 'TypeScript',
+    JavaScript = 'JavaScript',
+    NodeJS = 'NodeJS',
+    React = 'React',
+    Angular = 'Angular',
+    Express = 'Express',
+    HTML = 'HTML',
+    CSS = 'CSS',
+    MySQL = 'MySQL',
+    MongoDB = 'MongoDB',
+    Python = 'Python',
+    Flask = 'Flask',
+    Django = 'Django',
+    NextJS = 'NextJS'
+}
+
 
 
 export interface ProjectInterface {

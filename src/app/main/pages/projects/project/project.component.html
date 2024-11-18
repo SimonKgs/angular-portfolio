@@ -1,0 +1,49 @@
+<div class="rounded h-full bg-slate-200 overflow-hidden group">
+    <img [src]="project().image" alt="Image of project {{ project().title }}"
+    class="transition-transform duration-200 ease-in-out transform group-hover:scale-105"
+    loading="lazy"
+    />
+    
+    <p class="px-4 py-3 bg-slate-900 text-white font-semibold lg:text-2xl text-xl">{{ project().title }}</p>
+    <div class="flex flex-col py-2">
+        <p class="px-4 py-2 lg:text-xl text-lg">
+            @for (tech of project().technologies; track $index) {
+                {{ tech }}{{ ($index + 1) < project().technologies.length ? ',' : '' }}
+            }
+        </p>
+        <hr>
+        <p class="px-4 py-2 lg:text-lg text-sm">
+            {{project().startDate.getFullYear()}}/{{ project().startDate.getMonth() }}
+            @if (project().endDate) {
+                - {{project().endDate!.getFullYear()}}/{{ project().endDate!.getMonth() }}
+            }
+        </p>
+        <hr class="border-slate-300 my-2">
+        <p class="px-4 py-2 lg:text-xl text-lg">{{ project().description }}</p>
+        @if (project().url) {
+            <hr class="border-slate-300 my-2">
+            <p class="px-4 py-1 lg:text-xl text-lg">Repositories</p>
+            <div class="flex flex-col lg:flex-row justify-between">
+                @if (project().url?.frontend) {
+                    <a [href]="project().url!.frontend" target="_blank">
+                        <p class="px-4 py-2 lg:text-xl text-lg text-blue-400 hover:text-blue-700">visit frontend</p>
+                    </a>
+                }
+                @if (project().url?.backend) {
+                    <a [href]="project().url!.backend" target="_blank">
+                        <p class="px-4 py-2 lg:text-xl text-lg text-blue-400 hover:text-blue-700">visit backend</p>
+                    </a>
+                }
+            </div>
+        }
+        @if (project().liveUrl) {
+            <hr class="border-slate-300 my-2">
+            <p class="px-4 py-1 lg:text-xl text-lg">
+                Live Url:
+                <a [href]="project().liveUrl" target="_blank">
+                    <span class="px-4 py-2 lg:text-xl text-lg text-blue-400 hover:text-blue-700">visit the page</span>
+                </a>
+            </p>
+        }
+    </div>
+</div>
