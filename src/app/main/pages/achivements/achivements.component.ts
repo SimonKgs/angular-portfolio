@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { HeroComponent } from "../../shared/hero/hero.component";
 import { RouterModule } from '@angular/router';
-import certs from "./data/certs.json"
+import certs from "../../data/certs.json"
 import { Certs } from '../../interfaces/certs.interface';
 
 @Component({

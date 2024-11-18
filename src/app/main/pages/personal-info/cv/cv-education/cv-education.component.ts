@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import education from './data/education.json'
+import education from '../../../../data/education.json'
 import { Education } from '../../../../interfaces/education.interface';
 import { RouterModule } from '@angular/router';
 

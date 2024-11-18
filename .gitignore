@@ -1,5 +1,9 @@
 # See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
 
+# Ignore assets and any folder named 'data'
+assets/
+**/data/
+
 .env
 /src/environments/
 /src/environments/environment.ts

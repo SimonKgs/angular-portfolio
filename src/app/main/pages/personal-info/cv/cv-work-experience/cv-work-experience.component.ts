@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { Job } from '../../../../interfaces/job.interface';
-import jobs from './data/jobs.json'
+import jobs from '../../../../data/jobs.json'
 
 
 @Component({

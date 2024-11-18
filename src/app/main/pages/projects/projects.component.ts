@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { HeroComponent } from "../../shared/hero/hero.component";
-import projects from './data/projects.json'
+import projects from '../../data/projects.json'
 import { ProjectInterface, Technology } from '../../interfaces/project.interface';
 import { ProjectComponent } from "./project/project.component";
 
