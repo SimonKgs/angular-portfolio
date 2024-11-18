@@ -1,4 +1,67 @@
 <div class="mx-auto w-full">
     <app-hero pageTitle="Projects" subtitle="A Glimpse into My Work"/>
-    <p>Achivements Works!</p>
+    <div class="max-w-7xl w-full mx-auto lg:my-32 my-16 px-4 overflow-hidden">
+
+        <p class="lg:text-4xl text-2xl mb-10 underline font-bold">My Projects</p>
+        <p class="lg:text-2xl text-xl">
+            In this section, I'll share a few projects that were significant to my growth, whether as valuable learning experiences or personal challenges. Each one, regardless of complexity, helped me build new skills, confidence, and knowledge. While I won’t cover all my projects here, you can find more on my <a href="https://github.com/SimonKgs" class="text-blue-600">GitHub</a>.
+        </p>
+        <hr class="my-10 border-slate-800">
+        <div class="grid lg:grid-cols-2 gap-10">
+            @for (project of projects(); track $index) {
+                <div class="rounded bg-slate-200 overflow-hidden group">
+                    <img src="assets/azorius.jpg" alt="representation of {{ project.title }}"
+                    class="transition-transform duration-200 ease-in-out transform group-hover:scale-105"
+                    loading="lazy"
+                    />
+                    <p class="px-4 py-3 bg-slate-900 text-white font-semibold lg:text-2xl text-xl">{{ project.title }}</p>
+                    <div class="flex flex-col py-2">
+                        <p class="px-4 py-2 lg:text-xl text-lg">
+                            @for (tech of project.technologies; track $index) {
+                                {{ tech }}{{ ($index + 1) < project.technologies.length ? ',' : '' }}
+                            }
+                        </p>
+                        <hr>
+                        <p class="px-4 py-2 lg:text-lg text-sm">
+                            {{project.startDate.getFullYear()}}/{{ project.startDate.getMonth() }}
+                            @if (project.endDate) {
+                                - {{project.endDate.getFullYear()}}/{{ project.endDate.getMonth() }}
+                            }
+                        </p>
+                        <hr class="border-slate-400 my-2">
+                        <p class="px-4 py-2 lg:text-xl text-lg">{{ project.description }}</p>
+                        @if (project.url) {
+                            <hr class="border-slate-400 my-2">
+                            <p class="px-4 py-1 lg:text-xl text-lg">Repositories</p>
+                            <div class="flex flex-col lg:flex-row justify-between">
+                                @if (project.url.frontend) {
+                                    <a [href]="project.url.frontend" target="_blank">
+                                        <p class="px-4 py-2 lg:text-xl text-lg text-blue-400 hover:text-blue-700">visit frontend</p>
+                                    </a>
+                                }
+                                @if (project.url.backend) {
+                                    <a [href]="project.url.backend" target="_blank">
+                                        <p class="px-4 py-2 lg:text-xl text-lg text-blue-400 hover:text-blue-700">visit backend</p>
+                                    </a>
+                                }
+                            </div>
+                        }
+                        @if (project.liveUrl) {
+                            <hr class="border-slate-400 my-2">
+                            <p class="px-4 py-1 lg:text-xl text-lg">
+                                Live Url:
+                                <a [href]="project.liveUrl" target="_blank">
+                                    <span class="px-4 py-2 lg:text-xl text-lg text-blue-400 hover:text-blue-700">visit the page</span>
+                                </a>
+                            </p>
+                            
+                        }
+                    </div>
+                </div>
+            } @empty {
+                <p class="px-4 py-1 lg:text-2xl text-xl">Sorry, I don't have any project to show</p>
+            }
+        </div>
+    </div>
 </div>
+
