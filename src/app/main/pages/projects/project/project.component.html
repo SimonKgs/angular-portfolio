@@ -1,4 +1,4 @@
-<div class="rounded h-full bg-slate-200 overflow-hidden group">
+<div class="rounded h-full min-h-20 bg-slate-200 overflow-hidden group">
     <img [src]="project().image" alt="Image of project {{ project().title }}"
     class="transition-transform duration-200 ease-in-out transform group-hover:scale-105"
     loading="lazy"
@@ -22,28 +22,30 @@
         <p class="px-4 py-2 lg:text-xl text-lg">{{ project().description }}</p>
         @if (project().url) {
             <hr class="border-slate-300 my-2">
-            <p class="px-4 py-1 lg:text-xl text-lg">Repositories</p>
+            <div class="flex lg:flex-row flex-col lg:items-center">
+                <p class="px-4 py-1 lg:text-xl text-lg">Repositories:</p>
             <div class="flex flex-col lg:flex-row justify-between">
                 @if (project().url?.frontend) {
                     <a [href]="project().url!.frontend" target="_blank">
-                        <p class="px-4 py-2 lg:text-xl text-lg text-blue-400 hover:text-blue-700">visit frontend</p>
+                        <p class="px-4 py-2 lg:text-xl text-lg text-blue-400 hover:text-blue-700">frontend</p>
                     </a>
                 }
                 @if (project().url?.backend) {
                     <a [href]="project().url!.backend" target="_blank">
-                        <p class="px-4 py-2 lg:text-xl text-lg text-blue-400 hover:text-blue-700">visit backend</p>
+                        <p class="px-4 py-2 lg:text-xl text-lg text-blue-400 hover:text-blue-700">backend</p>
                     </a>
                 }
+            </div>
             </div>
         }
         @if (project().liveUrl) {
             <hr class="border-slate-300 my-2">
-            <p class="px-4 py-1 lg:text-xl text-lg">
-                Live Url:
+            <div class="flex lg:flex-row flex-col lg:items-center">
+                <p class="px-4 py-1 lg:text-xl text-lg">Live Url:</p>
                 <a [href]="project().liveUrl" target="_blank">
                     <span class="px-4 py-2 lg:text-xl text-lg text-blue-400 hover:text-blue-700">visit the page</span>
                 </a>
-            </p>
+            </div>
         }
     </div>
 </div>
